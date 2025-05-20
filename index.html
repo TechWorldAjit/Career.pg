@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enter Access Key</title>
+  <style>
+    body {
+      background-color: #121212;
+      font-family: Arial, sans-serif;
+      color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #1f1f1f;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      width: 300px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2a2a2a;
+      color: #fff;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #5409DA;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3f00ac;
+    }
+
+    .error {
+      color: #ff4d4d;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Enter Access Key</h2>
+    <input type="password" id="keyInput" placeholder="Enter key" />
+    <button onclick="checkKey()">Submit</button>
+    <div class="error" id="errorMsg"></div>
+  </div>
+
+  <script>
+    function checkKey() {
+      const inputKey = document.getElementById("keyInput").value.trim();
+      const correctKey = "techworld5";
+
+      if (inputKey === correctKey) {
+        window.location.href = "main.html";
+      } else {
+        document.getElementById("errorMsg").textContent = "Incorrect key. Access denied.";
+      }
+    }
+  </script>
+</body>
+</html>

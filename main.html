@@ -38,7 +38,18 @@ h1 {
   font-weight: bold;
   user-select: none;
 }
-
+#searchBox {
+      display: block;
+      margin: 0 auto 30px auto;
+      padding: 10px 20px;
+      width: 80%;
+      max-width: 400px;
+      border: none;
+      border-radius: 80px;
+      font-size: 16px;
+      background-color: #1e1e1e;
+      color: #eee;
+    }
 .company-box:hover {
  background-color:#5409DA
 }
@@ -56,7 +67,9 @@ h1 {
 <body>
 
   <h1>Top Global Companies - Career Pages</h1>
+  <input type="text" id="searchBox" placeholder="Search company name..." onkeyup="searchCompany()">
   <div class="container">
+    
     <a class="company-box  " href="https://careers.google.com/jobs/" target="_blank">Google (Alphabet)</a>
     <a class="company-box  " href="https://careers.microsoft.com/us/en" target="_blank">Microsoft</a>
 <a class="company-box  " href="https://www.amazon.jobs/" target="_blank">Amazon</a>
@@ -75,7 +88,7 @@ h1 {
 <a class="company-box  " href="https://careers.microsoft.com/us/en/search-results?keywords=linkedin" target="_blank">LinkedIn (Microsoft)</a>
 <a class="company-box  " href="https://www.paypal.com/us/webapps/mpp/jobs" target="_blank">PayPal</a>
 <a class="company-box  " href="https://www.spotifyjobs.com/" target="_blank">Spotify</a>
-<a class="company-box  " href="https://www.shopify.com/careers" target="_blank">Shopify 2</a>
+<a class="company-box  " href="https://www.shopify.com/careers" target="_blank">Shopify </a>
 <a class="company-box  " href="https://ibegin.tcs.com/iBegin/" target="_blank">Tata Consultancy Services (TCS)</a>
 <a class="company-box  " href="https://www.infosys.com/careers" target="_blank">Infosys</a>
 <a class="company-box  " href="https://careers.wipro.com/" target="_blank">Wipro</a>
@@ -106,10 +119,8 @@ h1 {
 <a class="company-box  " href="https://jobs.westerndigital.com/" target="_blank">Western Digital</a>
 <a class="company-box  " href="https://jobs.cisco.com/" target="_blank">Cisco Systems</a>
 <a class="company-box  " href="https://www.mongodb.com/careers" target="_blank">MongoDB</a>
-<a class="company-box  " href="https://www.shopify.com/careers" target="_blank" rel="noopener noreferrer">Shopify</a>
 <a class="company-box  " href="https://www.salesforce.com/company/careers/" target="_blank" rel="noopener noreferrer">Salesforce</a>
 <a class="company-box" href="https://www.squarespace.com/careers" target="_blank" rel="noopener noreferrer">Squarespace</a>
-<a class="company-box  " href="https://www.adobe.com/careers.html" target="_blank" rel="noopener noreferrer">Adobe</a>
 <a class="company-box  " href="https://www.autodesk.com/careers" target="_blank" rel="noopener noreferrer">Autodesk</a>
 <a class="company-box" href="https://careers.intuit.com/" target="_blank" rel="noopener noreferrer">Intuit</a>
 <a class="company-box  " href="https://careers.oracle.com/" target="_blank" rel="noopener noreferrer">Oracle</a>
@@ -246,14 +257,27 @@ h1 {
     <a class="company-box " href="https://www.fritolay.com/careers" target="_blank">Lay's (Frito-Lay/PepsiCo)</a>
     <a class="company-box " href="https://www.coca-colacompany.com/careers" target="_blank">Coca-Cola</a>
     <a class="company-box " href="https://www.nestle.com/jobs" target="_blank">Nestlé</a>
-    <a class="company-box " href="https://www.hul.co.in/careers/" target="_blank">Hindustan Unilever (HUL)</a> <a class="company-box " href="https://www.itcportal.com/about-itc/values-governance/people-philosophy.aspx" target="_blank">ITC Limited</a> <a class="company-box " href="https://www.britannia.co.in/careers" target="_blank">Britannia Industries</a>
+    <a class="company-box " href="https://www.hul.co.in/careers/" target="_blank">Hindustan Unilever (HUL)</a>
+    <a class="company-box " href="https://www.itcportal.com/careers/index.aspx" target="_blank">ITC Limited</a>
+    <a class="company-box " href="https://www.britannia.co.in/careers" target="_blank">Britannia Industries</a>
     <a class="company-box " href="https://www.parleproducts.com/careers" target="_blank">Parle Products</a>
-    <a class="company-box " href="https://www.adityabirlacapital.com/careers" target="_blank">Aditya Birla Group</a> <a class="company-box " href="https://www.bergerindia.com/career" target="_blank">Berger Paints</a> <a class="company-box " href="https://www.asianpaints.com/careers.html" target="_blank">Asian Paints</a> <a class="company-box " href="https://www.dabur.com/in/en-us/more/careers" target="_blank">Dabur</a> <a class="company-box " href="https://www.godrej.com/careers" target="_blank">Godrej Group</a> <a class="company-box " href="https://www.mcdonaldsindia.com/careers.aspx" target="_blank">McDonald's India</a> <a class="company-box " href="https://www.dominos.co.in/corporate/careers" target="_blank">Domino's Pizza India</a> <a class="company-box " href="https://www.tataconsumer.com/careers" target="_blank">Tata Consumer Products</a>
-    <a class="company-box " href="https://www.marico.com/careers" target="_blank">Marico</a> <a class="company-box " href="https://www.agroindia.com/career/" target="_blank">Agro Tech Foods</a>
+    <a class="company-box " href="https://www.adityabirlacapital.com/careers" target="_blank">Aditya Birla Group</a> 
+    <a class="company-box " href="https://www.bergerindia.com/career" target="_blank">Berger Paints</a>
+     <a class="company-box " href="https://www.asianpaints.com/careers.html" target="_blank">Asian Paints</a> 
+     <a class="company-box " href="https://www.dabur.com/in/en-us/more/careers" target="_blank">Dabur</a> 
+     <a class="company-box " href="https://www.godrej.com/careers" target="_blank">Godrej Group</a> 
+     <a class="company-box " href="https://www.mcdonaldsindia.com/careers.aspx" target="_blank">McDonald's India</a>
+      <a class="company-box " href="https://www.dominos.co.in/corporate/careers" target="_blank">Domino's Pizza India</a>
+       <a class="company-box " href="https://www.tataconsumer.com/careers" target="_blank">Tata Consumer Products</a>
+    <a class="company-box " href="https://www.marico.com/careers" target="_blank">Marico</a>
+     <a class="company-box " href="https://www.agroindia.com/career/" target="_blank">Agro Tech Foods</a>
     <a class="company-box " href="https://www.perfettiindia.com/careers/" target="_blank">Perfetti Van Melle India</a>
     <a class="company-box " href="https://www.kraftheinzcompany.com/careers.html" target="_blank">Kraft Heinz Company</a>
     <a class="company-box " href="https://www.generalmills.com/careers" target="_blank">General Mills</a>
-    <a class="company-box " href="https://www.pepsico.com/careers" target="_blank">PepsiCo</a> <a class="company-box " href="https://www.unilever.com/careers/" target="_blank">Unilever</a> <a class="company-box " href="https://www.procterandgamble.com/careers/" target="_blank">Procter & Gamble (P&G)</a> <a class="company-box " href="https://www.mondelezinternational.com/careers" target="_blank">Mondelēz International</a>
+    <a class="company-box " href="https://www.pepsico.com/careers" target="_blank">PepsiCo</a>
+     <a class="company-box " href="https://www.unilever.com/careers/" target="_blank">Unilever</a>
+      <a class="company-box " href="https://www.procterandgamble.com/careers/" target="_blank">Procter & Gamble (P&G)</a>
+      <a class="company-box " href="https://www.mondelezinternational.com/careers" target="_blank">Mondelēz International</a>
     <a class="company-box " href="https://www.danone.com/impact/people-and-careers/join-us.html" target="_blank">Danone</a>
     <a class="company-box " href="https://www.associatedbritishfoods.com/careers" target="_blank">Associated British Foods (ABF)</a>
     <a class="company-box " href="https://www.conagrafoods.com/careers" target="_blank">Conagra Brands</a>
@@ -334,7 +358,7 @@ h1 {
     <a class="company-box " href="https://www.mahindra.com/careers" target="_blank">Mahindra Group</a>
     <a class="company-box " href="https://www.asianpaints.com/careers.html" target="_blank">Asian Paints</a>
     <a class="company-box " href="https://www.hul.co.in/careers/" target="_blank">Hindustan Unilever (HUL)</a>
-    <a class="company-box " href="https://www.itcportal.com/about-itc/values-governance/people-philosophy.aspx" target="_blank">ITC Limited</a>
+    <a class="company-box " href="https://www.itcportal.com/careers/index.aspx" target="_blank">ITC Limited</a>
     <a class="company-box " href="https://www.nestle.in/jobs" target="_blank">Nestlé India</a>
     <a class="company-box " href="https://www.britannia.co.in/careers" target="_blank">Britannia Industries</a>
     <a class="company-box " href="https://www.marico.com/careers" target="_blank">Marico</a>
@@ -389,8 +413,8 @@ h1 {
     <a class="company-box " href="https://www.estee Lauder.com/careers" target="_blank">Estée Lauder Companies</a>
     <a class="company-box " href="https://careers.shiseido.com/" target="_blank">Shiseido</a>
     <a class="company-box " href="https://www.colgatepalmolive.com/en-us/careers" target="_blank">Colgate-Palmolive</a>
-    <a class="company-box " href="https://www.unilever.com/careers/" target="_blank">Unilever (repeated for emphasis on diverse brands)</a>
-    <a class="company-box " href="https://www.procterandgamble.com/careers/" target="_blank">Procter & Gamble (P&G) (repeated for emphasis on diverse brands)</a>
+    <a class="company-box " href="https://www.unilever.com/careers/" target="_blank">Unilever </a>
+    <a class="company-box " href="https://www.procterandgamble.com/careers/" target="_blank">Procter & Gamble (P&G) </a>
     <a class="company-box " href="https://www.adidas-group.com/en/careers/" target="_blank">Adidas</a>
     <a class="company-box " href="https://careers.puma.com/" target="_blank">Puma</a>
     <a class="company-box " href="https://careers.underarmour.com/" target="_blank">Under Armour</a>
@@ -398,7 +422,7 @@ h1 {
     <a class="company-box " href="https://www.inditex.com/en/careers" target="_blank">Inditex (Zara, Bershka etc.)</a>
     <a class="company-box " href="https://hmgroup.com/career/" target="_blank">H&M Group</a>
     <a class="company-box " href="https://www.starbucks.com/careers/" target="_blank">Starbucks</a>
-    <a class="company-box " href="https://www.mcdonalds.com/careers" target="_blank">McDonald's (repeated for global presence)</a>
+    <a class="company-box " href="https://www.mcdonalds.com/careers" target="_blank">McDonald's </a>
     <a class="company-box " href="https://www.yum.com/careers/" target="_blank">Yum! Brands (KFC, Pizza Hut, Taco Bell)</a>
     <a class="company-box " href="https://www.subway.com/en-US/Careers" target="_blank">Subway</a>
     <a class="company-box " href="https://www.dominos.com/en/pages/careers/" target="_blank">Domino's Pizza</a>
@@ -418,29 +442,29 @@ h1 {
     <a class="company-box " href="https://www.lamborghini.com/en-en/company/careers" target="_blank">Lamborghini</a>
     <a class="company-box " href="https://www.volvocars.com/intl/about/our-company/careers" target="_blank">Volvo Cars</a>
     <a class="company-box " href="https://www.daimler-truck.com/en/career/" target="_blank">Daimler Truck</a>
-    <a class="company-box " href="https://www.bosch.com/careers/" target="_blank">Bosch (repeated for its diverse global presence)</a>
+    <a class="company-box " href="https://www.bosch.com/careers/" target="_blank">Bosch </a>
     <a class="company-box " href="https://www.continental.com/en/career/" target="_blank">Continental AG</a>
     <a class="company-box " href="https://www.denso.com/global/en/careers/" target="_blank">DENSO</a>
-    <a class="company-box " href="https://www.siemens.com/global/en/company/jobs-careers.html" target="_blank">Siemens (repeated for its broad industrial scope)</a>
+    <a class="company-box " href="https://www.siemens.com/global/en/company/jobs-careers.html" target="_blank">Siemens </a>
     <a class="company-box " href="https://www.abb.com/careers" target="_blank">ABB</a>
-    <a class="company-box " href="https://www.hitachi.com/careers/" target="_blank">Hitachi (repeated for its diverse sectors)</a>
-    <a class="company-box " href="https://www.toshiba.co.jp/saiyo/en/" target="_blank">Toshiba (repeated for its diverse sectors)</a>
+    <a class="company-box " href="https://www.hitachi.com/careers/" target="_blank">Hitachi </a>
+    <a class="company-box " href="https://www.toshiba.co.jp/saiyo/en/" target="_blank">Toshiba </a>
     <a class="company-box " href="https://www.mitsubishicorp.com/jp/en/r/career/" target="_blank">Mitsubishi Corporation</a>
     <a class="company-box " href="https://www.sumitomocorp.com/en/recruit/" target="_blank">Sumitomo Corporation</a>
     <a class="company-box " href="https://www.itochu.co.jp/en/recruit/" target="_blank">ITOCHU Corporation</a>
     <a class="company-box " href="https://www.marubeni.com/en/recruit/" target="_blank">Marubeni Corporation</a>
     <a class="company-box " href="https://www.sk.com/en/career" target="_blank">SK Group</a>
     <a class="company-box " href="https://www.lg.com/global/careers" target="_blank">LG Electronics</a>
-    <a class="company-box " href="https://global.sharp/corporate/info/recruit/" target="_blank">Sharp (repeated)</a>
-    <a class="company-box " href="https://www.panasonic.com/global/corporate/careers.html" target="_blank">Panasonic (repeated)</a>
-    <a class="company-box " href="https://www.sony.com/en/SonyInfo/Careers/" target="_blank">Sony (repeated)</a>
-    <a class="company-box " href="https://www.canon.com/global/ir/employment/" target="_blank">Canon (repeated)</a>
-    <a class="company-box " href="https://www.epson.com/cgi-bin/Store/JobConnect/Careers.jsp" target="_blank">Epson (repeated)</a>
-    <a class="company-box " href="https://www.fujifilmholdings.com/en/about/company/recruit/" target="_blank">Fujifilm (repeated)</a>
-    <a class="company-box " href="https://www.shell.com/careers" target="_blank">Shell (repeated for global energy presence)</a>
-    <a class="company-box " href="https://www.bp.com/careers" target="_blank">BP (repeated for global energy presence)</a>
-    <a class="company-box " href="https://www.exxonmobil.com/careers" target="_blank">ExxonMobil (repeated for global energy presence)</a>
-    <a class="company-box " href="https://www.chevron.com/careers" target="_blank">Chevron (repeated for global energy presence)</a>
+    <a class="company-box " href="https://global.sharp/corporate/info/recruit/" target="_blank">Sharp</a>
+    <a class="company-box " href="https://www.panasonic.com/global/corporate/careers.html" target="_blank">Panasonic </a>
+    <a class="company-box " href="https://www.sony.com/en/SonyInfo/Careers/" target="_blank">Sony </a>
+    <a class="company-box " href="https://www.canon.com/global/ir/employment/" target="_blank">Canon </a>
+    <a class="company-box " href="https://www.epson.com/cgi-bin/Store/JobConnect/Careers.jsp" target="_blank">Epson </a>
+    <a class="company-box " href="https://www.fujifilmholdings.com/en/about/company/recruit/" target="_blank">Fujifilm </a>
+    <a class="company-box " href="https://www.shell.com/careers" target="_blank">Shell </a>
+    <a class="company-box " href="https://www.bp.com/careers" target="_blank">BP </a>
+    <a class="company-box " href="https://www.exxonmobil.com/careers" target="_blank">ExxonMobil </a>
+    <a class="company-box " href="https://www.chevron.com/careers" target="_blank">Chevron </a>
     <a class="company-box " href="https://www.totalenergies.com/en/careers" target="_blank">TotalEnergies</a>
     <a class="company-box " href="https://www.aramco.com/en/careers" target="_blank">Saudi Aramco</a>
     <a class="company-box " href="https://www.gazprom.com/careers/" target="_blank">Gazprom</a>
@@ -451,26 +475,26 @@ h1 {
     <a class="company-box " href="https://www.vale.com/EN/investors/information-center/careers/Paginas/default.aspx" target="_blank">Vale</a>
     <a class="company-box " href="https://www.glencore.com/careers" target="_blank">Glencore</a>
     <a class="company-box " href="https://www.angloamerican.com/careers" target="_blank">Anglo American</a>
-    <a class="company-box " href="https://www.danaher.com/careers" target="_blank">Danaher (repeated for its diverse technology portfolio)</a>
+    <a class="company-box " href="https://www.danaher.com/careers" target="_blank">Danaher </a>
     <a class="company-box " href="https://careers.thermofisher.com/" target="_blank">Thermo Fisher Scientific</a>
-    <a class="company-box " href="https://www.abbott.com/careers.html" target="_blank">Abbott (repeated for its healthcare focus)</a>
+    <a class="company-box " href="https://www.abbott.com/careers.html" target="_blank">Abbott </a>
     <a class="company-box " href="https://www.medtronic.com/us-en/about/careers.html" target="_blank">Medtronic</a>
     <a class="company-box " href="https://www.bd.com/en-us/company/careers" target="_blank">BD (Becton, Dickinson and Company)</a>
     <a class="company-box " href="https://www.siemens-healthineers.com/en/careers" target="_blank">Siemens Healthineers</a>
-    <a class="company-box " href="https://www.philips.com/careers" target="_blank">Philips (repeated for its healthcare and technology focus)</a>
+    <a class="company-box " href="https://www.philips.com/careers" target="_blank">Philips </a>
     <a class="company-box " href="https://www.gehealthcare.com/careers" target="_blank">GE HealthCare</a>
-    <a class="company-box " href="https://careers.jnj.com/" target="_blank">Johnson & Johnson (repeated for its broad healthcare scope)</a>
-    <a class="company-box " href="https://careers.pfizer.com/" target="_blank">Pfizer (repeated for its pharmaceutical focus)</a>
-    <a class="company-box " href="https://careers.novartis.com/" target="_blank">Novartis (repeated for its pharmaceutical focus)</a>
-    <a class="company-box " href="https://www.roche.com/careers.htm" target="_blank">Roche (repeated for its pharmaceutical and diagnostics focus)</a>
+    <a class="company-box " href="https://careers.jnj.com/" target="_blank">Johnson & Johnson </a>
+    <a class="company-box " href="https://careers.pfizer.com/" target="_blank">Pfizer </a>
+    <a class="company-box " href="https://careers.novartis.com/" target="_blank">Novartis </a>
+    <a class="company-box " href="https://www.roche.com/careers.htm" target="_blank">Roche </a>
     <a class="company-box " href="https://www.sanofi.com/en/careers" target="_blank">Sanofi</a>
     <a class="company-box " href="https://careers.gsk.com/" target="_blank">GSK (GlaxoSmithKline)</a>
     <a class="company-box " href="https://www.astrazeneca.com/careers.html" target="_blank">AstraZeneca</a>
     <a class="company-box " href="https://www.merck.com/careers/" target="_blank">Merck & Co. (known as MSD outside the United States and Canada)</a>
     <a class="company-box " href="https://www.boehringer-ingelheim.com/careers" target="_blank">Boehringer Ingelheim</a>
     <a class="company-box " href="https://www.bayer.com/en/career" target="_blank">Bayer</a>
-    <a class="company-box " href="https://www.basf.com/global/en/company/career/index.html" target="_blank">BASF (repeated for its chemical industry leadership)</a>
-    <a class="company-box " href="https://www.dow.com/en-us/careers.html" target="_blank">Dow Chemical (repeated for its chemical industry leadership)</a>
+    <a class="company-box " href="https://www.basf.com/global/en/company/career/index.html" target="_blank">BASF </a>
+    <a class="company-box " href="https://www.dow.com/en-us/careers.html" target="_blank">Dow Chemical </a>
     <a class="company-box " href="https://www.linde.com/careers" target="_blank">Linde</a>
     <a class="company-box " href="https://www.airliquide.com/careers" target="_blank">Air Liquide</a>
     <a class="company-box " href="https://www.sherwin-williams.com/careers" target="_blank">Sherwin-Williams</a>
@@ -643,35 +667,53 @@ h1 {
         <a class="company-box " href="https://www.piaget.com/ww-en/careers" target="_blank">Piaget (Richemont)</a>
         <a class="company-box " href="https://www.montblanc.com/en-us/discover/careers" target="_blank">Montblanc (Richemont)</a>
         <a class="company-box " href="https://www.swarovski.com/en-GB-GB/s/careers/" target="_blank">Swarovski</a>
-        <a class="company-box " href="https://www.tiffany.com/careers/" target="_blank">Tiffany & Co. (repeated for luxury jewelry)</a>
-        <a class="company-box  " href="https://www.bulgari.com/en-int/careers.html" target="_blank">Bulgari (repeated for luxury jewelry)</a>
-        <a class="company-box " href="https://www.cartier.com/en-us/maison/careers/" target="_blank">Cartier (repeated for luxury jewelry)</a>
-        <a class="company-box  " href="https://www.carrieres-rolex.com/" target="_blank">Rolex (repeated for luxury watches)</a>
-        <a class="company-box " href="https://www.omegawatches.com/en-us/careers" target="_blank">OMEGA (repeated for luxury watches)</a>
-        <a class="company-box " href="https://www.tagheuer.com/int/en/careers.html" target="_blank">TAG Heuer (repeated for luxury watches)</a>
-        <a class="company-box " href="https://www.patek.com/en/company/careers" target="_blank">Patek Philippe (repeated for luxury watches)</a>
-        <a class="company-box " href="https://www.audemarspiguet.com/com/en/careers.html" target="_blank">Audemars Piguet (repeated for luxury watches)</a>
-        <a class="company-box " href="https://www.vacheron-constantin.com/en/careers" target="_blank">Vacheron Constantin (repeated for luxury watches)</a>
-        <a class="company-box " href="https://www.iwc.com/en/careers.html" target="_blank">IWC Schaffhausen (repeated for luxury watches)</a>
-        <a class="company-box " href="https://www.jaeger-lecoultre.com/ww/en/careers.html" target="_blank">Jaeger-LeCoultre (repeated for luxury watches)</a>
+        <a class="company-box " href="https://www.tiffany.com/careers/" target="_blank">Tiffany & Co.   </a>
+        <a class="company-box  " href="https://www.bulgari.com/en-int/careers.html" target="_blank">Bulgari   </a>
+        <a class="company-box " href="https://www.cartier.com/en-us/maison/careers/" target="_blank">Cartier </a>
+        <a class="company-box  " href="https://www.carrieres-rolex.com/" target="_blank">Rolex   </a>
+        <a class="company-box " href="https://www.omegawatches.com/en-us/careers" target="_blank">OMEGA   </a>
+        <a class="company-box " href="https://www.tagheuer.com/int/en/careers.html" target="_blank">TAG Heuer   </a>
+        <a class="company-box " href="https://www.patek.com/en/company/careers" target="_blank">Patek Philippe   </a>
+        <a class="company-box " href="https://www.audemarspiguet.com/com/en/careers.html" target="_blank">Audemars Piguet   </a>
+        <a class="company-box " href="https://www.vacheron-constantin.com/en/careers" target="_blank">Vacheron Constantin   </a>
+        <a class="company-box " href="https://www.iwc.com/en/careers.html" target="_blank">IWC Schaffhausen   </a>
+        <a class="company-box " href="https://www.jaeger-lecoultre.com/ww/en/careers.html" target="_blank">Jaeger-LeCoultre   </a>
         <a class="company-box " href="https://www.piaget.com/ww-en/careers" target="_blank">Piaget (repeated for luxury watches and jewelry)</a>
         <a class="company-box " href="https://www.montblanc.com/en-us/discover/careers" target="_blank">Montblanc (repeated for luxury writing instruments, leather goods etc.)</a>
         <a class="company-box " href="https://www.swarovski.com/en-GB-GB/s/careers/" target="_blank">Swarovski (repeated for crystal jewelry and decor)</a>
-        <a class="company-box " href="https://www.tiffany.com/careers/" target="_blank">Tiffany & Co. (repeated again for emphasis on luxury)</a>
-        <a class="company-box " href="https://www.bulgari.com/en-int/careers.html" target="_blank">Bulgari (repeated again for emphasis on luxury)</a>
-        <a class="company-box " href="https://www.cartier.com/en-us/maison/careers/" target="_blank">Cartier (repeated again for emphasis on luxury)</a>
-        <a class="company-box  " href="https://www.carrieres-rolex.com/" target="_blank">Rolex (repeated again for emphasis on luxury)</a>
-        <a class="company-box " href="https://www.omegawatches.com/en-us/careers" target="_blank">OMEGA (repeated again for emphasis on luxury)</a>
-        <a class="company-box " href="https://www.tagheuer.com/int/en/careers.html" target="_blank">TAG Heuer (repeated again for emphasis on luxury)</a>
-        <a class="company-box " href="https://www.patek.com/en/company/careers" target="_blank">Patek Philippe (repeated again for emphasis on luxury)</a>
-        <a class="company-box " href="https://www.audemarspiguet.com/com/en/careers.html" target="_blank">Audemars Piguet (repeated again for emphasis on luxury)</a>
-        <a class="company-box " href="https://www.vacheron-constantin.com/en/careers" target="_blank">Vacheron Constantin (repeated again for emphasis on luxury)</a>
-        <a class="company-box " href="https://www.iwc.com/en/careers.html" target="_blank">IWC Schaffhausen (repeated again for emphasis on luxury)</a>
-        <a class="company-box " href="https://www.jaeger-lecoultre.com/ww/en/careers.html" target="_blank">Jaeger-LeCoultre (repeated again for emphasis on luxury)</a>
-        <a class="company-box " href="https://www.piaget.com/ww-en/careers" target="_blank">Piaget (repeated again for emphasis on luxury)</a>
-        <a class="company-box " href="https://www.montblanc.com/en-us/discover/careers" target="_blank">Montblanc (repeated again for emphasis on luxury)</a>
-        <a class="company-box " href="https://www.swarovski.com/en-GB-GB/s/careers/" target="_blank">Swarovski (repeated again for emphasis on luxury)</a>
-    
+        <a class="company-box " href="https://www.tiffany.com/careers/" target="_blank">Tiffany & Co.  </a>
+        <a class="company-box " href="https://www.bulgari.com/en-int/careers.html" target="_blank">Bulgari  </a>
+        <a class="company-box " href="https://www.cartier.com/en-us/maison/careers/" target="_blank">Cartier  </a>
+        <a class="company-box  " href="https://www.carrieres-rolex.com/" target="_blank">Rolex  </a>
+        <a class="company-box " href="https://www.omegawatches.com/en-us/careers" target="_blank">OMEGA  </a>
+        <a class="company-box " href="https://www.tagheuer.com/int/en/careers.html" target="_blank">TAG Heuer  </a>
+        <a class="company-box " href="https://www.patek.com/en/company/careers" target="_blank">Patek Philippe  </a>
+        <a class="company-box " href="https://www.audemarspiguet.com/com/en/careers.html" target="_blank">Audemars Piguet  </a>
+        <a class="company-box " href="https://www.vacheron-constantin.com/en/careers" target="_blank">Vacheron Constantin  </a>
+        <a class="company-box " href="https://www.iwc.com/en/careers.html" target="_blank">IWC Schaffhausen  </a>
+        <a class="company-box " href="https://www.jaeger-lecoultre.com/ww/en/careers.html" target="_blank">Jaeger-LeCoultre  </a>
+        <a class="company-box " href="https://www.piaget.com/ww-en/careers" target="_blank">Piaget  </a>
+        <a class="company-box " href="https://www.montblanc.com/en-us/discover/careers" target="_blank">Montblanc  </a>
+        <a class="company-box " href="https://www.swarovski.com/en-GB-GB/s/careers/" target="_blank">Swarovski  </a>
+    <a class="company-box" href="https://www.titancompany.in/careers" target="_blank">Titan (Watches)</a>
+<a class="company-box" href="https://www.fastrack.in/careers" target="_blank">Fastrack</a>
+<a class="company-box" href="https://www.timexindia.com/" target="_blank">Timex</a>
+<a class="company-box" href="https://corporate.boat-lifestyle.com/pages/careers" target="_blank">boAt Lifestyle</a>
+<a class="company-box" href="https://zebronics.com/pages/careers" target="_blank">Zebronics</a>
+<a class="company-box" href="https://careers.noise.in/" target="_blank">Noise</a>
+<a class="company-box" href="https://www.fireboltt.com/pages/careers" target="_blank">Fire-Boltt</a>
+<a class="company-box" href="https://www.realme.com/in/careers" target="_blank">Realme India</a>
+<a class="company-box" href="https://www.mi.com/in/about/career/" target="_blank">Xiaomi (Mi India)</a>
+<a class="company-box" href="https://www.hdfcbank.com/personal/about-us/careers" target="_blank">HDFC Bank</a>
+<a class="company-box" href="https://www.icicicareers.com/" target="_blank">ICICI Bank</a>
+<a class="company-box" href="https://www.axisbank.com/careers" target="_blank">Axis Bank</a>
+<a class="company-box" href="https://www.sbi.co.in/web/careers" target="_blank">State Bank of India (SBI)</a>
+<a class="company-box" href="https://www.kotak.com/en/about-us/careers.html" target="_blank">Kotak Mahindra Bank</a>
+<a class="company-box" href="https://www.yesbank.in/about-us/careers" target="_blank">Yes Bank</a>
+<a class="company-box" href="https://www.indusind.com/in/en/personal/careers.html" target="_blank">IndusInd Bank</a>
+<a class="company-box" href="https://www.rblbank.com/career" target="_blank">RBL Bank</a>
+<a class="company-box" href="https://www.bankofbaroda.in/career" target="_blank">Bank of Baroda</a>
+
 
 
 
@@ -708,6 +750,18 @@ h1 {
     <!-- You can continue the same pattern to add 80 more companies -->
     <!-- If you'd like me to generate the remaining 80, let me know! -->
   </div>
+<h2>Send Your Feedback <a  href="mailto:techworld6655+100@gmail.com" target="_blank"> techworld6655+100@gmail.com </a></h2>
 
+  <script>
+    function searchCompany() {
+      const input = document.getElementById('searchBox').value.toLowerCase();
+      const boxes = document.querySelectorAll('.company-box');
+
+      boxes.forEach(box => {
+        const name = box.textContent.toLowerCase();
+        box.style.display = name.includes(input) ? 'block' : 'none';
+      });
+    }
+  </script>
 </body>
 </html>

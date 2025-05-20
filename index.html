@@ -45,7 +45,9 @@
       font-size: 16px;
       cursor: pointer;
     }
-
+h1{
+   color: #5409DA;
+}
     button:hover {
       background-color: #3f00ac;
     }
@@ -57,7 +59,9 @@
   </style>
 </head>
 <body>
+  
   <div class="container">
+    <h1>Career.PG ⤤</h1>
     <h2>Enter Access Key</h2>
     <input type="password" id="keyInput" placeholder="Enter key" />
     <button onclick="checkKey()">Submit</button>
@@ -67,7 +71,7 @@
   <script>
     function checkKey() {
       const inputKey = document.getElementById("keyInput").value.trim();
-      const correctKey = "techworld5";
+      const correctKey = "techworldajit5";
 
       if (inputKey === correctKey) {
         window.location.href = "main.html";
